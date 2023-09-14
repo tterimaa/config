@@ -18,6 +18,10 @@ end
 
 local keymap = vim.keymap -- for conciseness
 
+vim.diagnostic.config({
+	virtual_text = { source = true },
+})
+
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
 	-- keybind options
