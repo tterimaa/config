@@ -20,6 +20,7 @@ null_ls.setup({
 		formatting.stylua, -- lua formatter
 		formatting.black, -- python formatting
 		formatting.eslint_d,
+		formatting.gofmt,
 		diagnostics.mypy.with({
 			command = { "python3", "-m", "mypy" },
 		}), -- python linter
