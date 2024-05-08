@@ -4,7 +4,7 @@ let
   packages = [
     pkgs.vim
     pkgs.git
-    pkgs.jdk
+    pkgs.jdk17
     pkgs.maven
     # unstable.jdk21
     # (unstable.maven.override { jdk = unstable.jdk21; })
