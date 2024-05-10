@@ -36,7 +36,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
-				"nil", -- nix
+				"nil_ls", -- nix
 			},
 		})
 
