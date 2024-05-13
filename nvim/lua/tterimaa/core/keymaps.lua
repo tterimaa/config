@@ -7,6 +7,9 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
+keymap.set("n", "<leader>sp", ":e#<CR>")
+keymap.set("n", "<leader>sn", ":e#n<CR>")
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
