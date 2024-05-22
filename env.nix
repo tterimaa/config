@@ -5,7 +5,7 @@ let
     pkgs.vim
     pkgs.git
     pkgs.jdk21
-    pkgs.maven
+    (pkgs.maven.override { jdk = pkgs.jdk21; })
     pkgs.nodejs-18_x
     pkgs.nodePackages.grunt-cli
     unstable.podman
