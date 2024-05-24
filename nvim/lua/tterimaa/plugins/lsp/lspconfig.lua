@@ -25,6 +25,21 @@ return {
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
 				local opts = { buffer = ev.buf, silent = true }
 
+				local diagnostics_enabled = true
+
+				-- Function to toggle diagnostics
+				local function toggle_diagnostics()
+					if diagnostics_enabled then
+						vim.diagnostic.hide()
+						diagnostics_enabled = false
+						print("Diagnostics disabled")
+					else
+						vim.diagnostic.show()
+						diagnostics_enabled = true
+						print("Diagnostics enabled")
+					end
+				end
+
 				-- set keybinds
 				opts.desc = "Show LSP references"
 				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
@@ -46,6 +61,9 @@ return {
 
 				opts.desc = "Smart rename"
 				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+
+				opts.desc = "Toggle diagnostics"
+				keymap.set("n", "<leader>dd", toggle_diagnostics, opts)
 
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
