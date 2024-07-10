@@ -1,14 +1,14 @@
 let
   pkgs = import <nixpkgs> {};
-  unstable = import <unstable> {};
   packages = [
     pkgs.vim
+    pkgs.python311Full
     pkgs.git
     pkgs.jdk21
     (pkgs.maven.override { jdk = pkgs.jdk21; })
     pkgs.nodejs-18_x
     pkgs.nodePackages.grunt-cli
-    unstable.podman
+    pkgs.podman
     pkgs.qemu
     pkgs.ant
     pkgs.shellcheck
