@@ -19,9 +19,6 @@ let
     pkgs.skhd
     pkgs.ripgrep
     pkgs.tmux
-    (pkgs.tomcat9.overrideAttrs (finalAttrs: previousAttrs: {
-      meta.priority = 0;
-    }))
   ];
 in
 packages
