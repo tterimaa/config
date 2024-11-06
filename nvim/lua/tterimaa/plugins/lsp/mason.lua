@@ -37,6 +37,7 @@ return {
 				"pyright",
 				"nil_ls", -- nix
 				"gopls",
+        "golangci_lint_ls",
 			},
 		})
 
